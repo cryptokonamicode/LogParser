@@ -1,0 +1,27 @@
+I am currently tasked with taking a log file from an Apache Server and doing the following:
+
+Parse the fields and display them individually
+
+Display how many IP Addresses are on the file
+
+For each IP Address, show the address and how many times it shows up in the log file
+
+I have an example of the format here
+
+I am willing to pay for either a solution or a start to a solution. Obviously the closer to a solution the better. Thank you
+
+ip address
+ - - 
+[date/time access]
+"GET command returning the page hosted on the server(?)"
+200 3638 (no idea what this is, no quotes)
+"-" (this is only on some lines. Oh, it's the url line and some of them don't have them.)
+"Mozilla/Linux/Gecko/Firefox (something to do with the computer accessing the website"
+
+1. Parse fields, display individually.
+2. Display how many IP addresses are on the file.
+3. For each IP address, show the address and how many times it shows up in the log file.
+
+1 - Regex? Create an object with fields for each of the file's fields; create a print method. Regex to separate values, create objects with the separated values.
+2 - Display how many IP addresses are on the file. If you want the number of unique addresses, go to 3. If you just want the total, it should be the same as the number of entries.
+3 - This is pretty simple. Use a hashmap. For each IP address, check if it's already a key. If it is, add one to the value. If it's not, create a new key value pair. The IP address is the key, the value is 1. To get a list of all unique IP addresses, print the keys. 
